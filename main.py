@@ -2,7 +2,7 @@ import requests
 
 
 # Функция удаления партнеров или партнера
-def drop_partners(partners_id: list) -> int:
+def drop_partners(partners_id:list) -> int:
     # Проверка наличия списка id партнеров
     try:
         id_count = len(partners_id)
