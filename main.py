@@ -29,11 +29,13 @@ def drop_partners(partners_id:list) -> int:
                     print(f"Партнер ID: {p} Результат: {result.status_code}\n{result.content.decode()}")
             except Exception as e:
                 print(f'Не удалось удалить партнера, ошибка: {e}')
-        return 0
+        return 0, result.status_code
 
 
 if __name__ == '__main__':
     partners_id = [12356, 12357]
-    drop_partners(partners_id)
+    res_func = drop_partners(partners_id)
+    print(res_func[0])
+
 
 
